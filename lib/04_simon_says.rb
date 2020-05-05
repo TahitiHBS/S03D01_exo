@@ -24,11 +24,14 @@ end
 def titleize(sentence)
 	av = 0
 	fin = sentence.size
-	ap = sentence.index(' ')
-	word = sentence[av..fin]
+	n_word = []
+
+	ap = sentence[av..fin].index(' ')
+	word = sentence[av...ap]
 	word = word.capitalize
+	n_word << word
 	av = ap
+	ap = fin
 
-
-
+	return n_word
 end
